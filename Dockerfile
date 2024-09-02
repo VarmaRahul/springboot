@@ -5,8 +5,7 @@ FROM maven:3.6.3-openjdk-17-slim AS build
 WORKDIR /app
 
 # Copy the pom.xml and the project files to the container
-COPY pom.xml .
-COPY src ./src
+COPY demo .
 
 # Build the application using Maven
 RUN mvn clean package -DskipTests
