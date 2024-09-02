@@ -24,7 +24,7 @@ jobs:
           password: ${{secrets.DOCKERHUB_PASSWORD}}
 
     - name: Build Docker image
-      run: docker build -t xedose/${{ github.repository }}/my-app:${{ github.sha }} .
+      run: docker build -t xedose/springboot-app .
 
     - name: Push Docker image
-      run: docker push xedose/${{ github.repository }}/my-app:${{ github.sha }}
+      run: docker push xedose/springboot-app
