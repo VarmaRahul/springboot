@@ -12,7 +12,7 @@ FROM openjdk:17-alpine
 # Set the working directory in the container
 WORKDIR /app
 # Copy the built JAR file from the previous stage to the container
-COPY --from=build /app/target/*.jar .
+COPY --from=build /demo/app/target/*.jar .
 # Set the command to run the application
 CMD ["java", "-jar", "*.jar"]
 #End
