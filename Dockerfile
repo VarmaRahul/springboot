@@ -15,3 +15,4 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar .
 # Set the command to run the application
 CMD ["java", "-jar", "*.jar"]
+#End
